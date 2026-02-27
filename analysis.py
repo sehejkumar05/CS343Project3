@@ -20,42 +20,48 @@
 # value iteration.
 
 def question2():
-    answerDiscount = 0.9
-    answerNoise = 0.2
+    answerDiscount = 0.5
+    #changing this value so agent always moves where intended 
+    answerNoise = 0.0
     return answerDiscount, answerNoise
 
 def question3a():
-    answerDiscount = None
-    answerNoise = None
-    answerLivingReward = None
+    answerDiscount = .25 # low so future rewards dont matter as much
+    answerNoise = 0.0 #no risk of falling
+    answerLivingReward = -1 #makes agent finish quicker
+    #this will cause the agent to take shortest path and ignore danger
     return answerDiscount, answerNoise, answerLivingReward
     # If not possible, return 'NOT POSSIBLE'
 
 def question3b():
-    answerDiscount = None
-    answerNoise = None
-    answerLivingReward = None
+    answerDiscount = .5
+    answerNoise = .25 #high noise to make cliff dangerous
+    answerLivingReward = -1 #still prefer closer exit
+    #the gaent will avoid risky path and prefer close exit
     return answerDiscount, answerNoise, answerLivingReward
     # If not possible, return 'NOT POSSIBLE'
 
 def question3c():
-    answerDiscount = None
-    answerNoise = None
-    answerLivingReward = None
+    answerDiscount = .9 #makes +10 valuable
+    answerNoise = 0
+    answerLivingReward = -1 
+    #this will have the agent go to the +1= and take shortest route
     return answerDiscount, answerNoise, answerLivingReward
     # If not possible, return 'NOT POSSIBLE'
 
 def question3d():
-    answerDiscount = None
-    answerNoise = None
-    answerLivingReward = None
+    answerDiscount = .75 #makes +10 valuable
+    answerNoise = .5 #shows the cliff is dangerous
+    answerLivingReward = -.5
+    #now this will not prefer exiting that early but go to +10 safely
     return answerDiscount, answerNoise, answerLivingReward
     # If not possible, return 'NOT POSSIBLE'
 
 def question3e():
-    answerDiscount = None
-    answerNoise = None
-    answerLivingReward = None
+    #positive living rate makes it go on forever
+    answerDiscount = .9
+    answerNoise = .25
+    answerLivingReward = 1.0
     return answerDiscount, answerNoise, answerLivingReward
     # If not possible, return 'NOT POSSIBLE'
 
