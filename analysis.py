@@ -20,7 +20,7 @@
 # value iteration.
 
 def question2():
-    answerDiscount = 0.5
+    answerDiscount = 0.9
     #changing this value so agent always moves where intended 
     answerNoise = 0.0
     return answerDiscount, answerNoise
@@ -66,10 +66,7 @@ def question3e():
     # If not possible, return 'NOT POSSIBLE'
 
 def question8():
-    answerEpsilon = None
-    answerLearningRate = None
-    return answerEpsilon, answerLearningRate
-    # If not possible, return 'NOT POSSIBLE'
+    return 'NOT POSSIBLE'
 
 if __name__ == '__main__':
     print('Answers to analysis questions:')
